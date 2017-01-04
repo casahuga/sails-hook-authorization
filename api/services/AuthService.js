@@ -1,7 +1,7 @@
 "use strict";
 
 const jwt    = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt-nodejs');
 const _      = require('lodash');
 
 // todo: remove this function when https://github.com/auth0/node-jsonwebtoken/pull/172 is merged

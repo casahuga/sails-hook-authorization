@@ -1,4 +1,4 @@
-var bcrypt = require('bCrypt');
+var bcrypt = require('bcrypt-nodejs');
 
 module.exports = {
   attributes: {
