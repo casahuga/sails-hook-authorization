@@ -1,4 +1,4 @@
-var bcrypt = require('bcrypt');
+var bcrypt = require('bCrypt');
 
 module.exports = {
   attributes: {
