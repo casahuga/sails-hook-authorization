@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "async": "^0.9.0",
-    "bcrypt": "^0.8.6",
+    "bcrypt-nodejs": "^0.0.3",
     "jsonwebtoken": "^6.2.0",
     "lodash": "^4.0.0",
     "request-helpers": "^2.0.1",
