@@ -55,7 +55,11 @@ function encryptPassword(values, next) {
     return next();
   }
 
-  bcrypt.hash(values.password, 10, (error, hash) => {
+  bcrypt.genSalt(10, function (err, reply) {
+    if (err) { return err }      
+    salt = reply;
+  })
+  bcrypt.hash(values.password, salt, null, function (error, hash) {
     if (error) {
       return next(error);
     }
