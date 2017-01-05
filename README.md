@@ -1,3 +1,5 @@
+This lib heavily reused code from sails-hook-authorization library but the bcrypt library was change to https://github.com/shaneGirish/bcrypt-nodejs which one can we used in windows platforms.
+
 # sails-hook-authorization
 Hook that provides jwt authentication sails-compatible scheme, such as policies, routes, controllers, services.
 Based on https://github.com/saviogl/sails-hook-jwt-auth
