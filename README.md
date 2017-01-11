@@ -7,7 +7,7 @@ Based on https://github.com/saviogl/sails-hook-jwt-auth
 # Installation
 
 ```javascript
-npm install npm i sails-hook-authorization-bcrypt-nodejs --save
+npm install sails-hook-authorization-bcrypt-nodejs --save
 ```
 
 # Service

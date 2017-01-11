@@ -41,7 +41,9 @@ module.exports = {
 
     try {
       // check if the password is already hashed
-      bcrypt.getRounds(values.password);
+      if (isNaN(bcrypt.getRounds(values.password))) {
+        return encryptPassword(values, next);
+      }
     } catch(e) {
       return encryptPassword(values, next);
     }
