@@ -136,7 +136,7 @@ module.exports = {
 
     params = params.asObject();
 
-    sails.services.authService.verifyToken(params.token)
+    sails.services.authservice.verifyToken(params.token)
       .then(decodedToken => {
         return sails.models.user.findOneId(decodedToken.activate);
       }).then(user => {
