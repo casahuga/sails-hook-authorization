@@ -138,7 +138,7 @@ module.exports = {
 
     sails.services.authservice.verifyToken(params.token)
       .then(decodedToken => {
-        return sails.models.user.findOneId(decodedToken.activate);
+        return sails.models.user.findOneById(decodedToken.activate);
       }).then(user => {
       if (!user) {
         throw 'invalid_user';
