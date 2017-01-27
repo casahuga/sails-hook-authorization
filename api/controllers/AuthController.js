@@ -129,6 +129,7 @@ module.exports = {
 
   verifyEmail: (req, res) => {
     var params = requestHelpers.secureParameters(['token'], req, true);
+    var userFinded;
 
     if (!params.isValid()) {
       return res.badRequest('missing_parameters', params.getMissing());
@@ -145,10 +146,15 @@ module.exports = {
       }
 
       user.emailConfirmed = true;
-
+      userFinded = user;
       return user.save();
     }).then(() => {
-      res.ok();
+      var accessToken = sails.services.authservice.issueTokenForUser(userFinded);
+
+      return res.ok({
+          access_token : accessToken,
+          refresh_token: sails.services.authservice.issueRefreshTokenForUser(accessToken)
+        });
     }).catch(error => {
       if (typeof error === 'string') {
         return res.badRequest(error);
