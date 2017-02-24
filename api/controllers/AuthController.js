@@ -49,6 +49,7 @@ module.exports = {
 
   me: (req, res) => {
     User.findOne(req.access_token.user)
+      .populateAll() 
       .then(res.ok)
       .catch(res.negotiate);
   },
