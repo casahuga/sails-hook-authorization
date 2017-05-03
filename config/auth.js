@@ -17,6 +17,10 @@ module.exports.auth = {
     requireEmailVerification: false
   },
 
+  checkLogin: (user) => {
+      return true; //throw error if you want to stop login
+  },
+
   jwt: {
     payloadProperties: [],
     accessTokenTtl   : process.env.JWT_TOKEN_TTL || 86400,  // 1 day

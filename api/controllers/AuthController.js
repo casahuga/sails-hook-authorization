@@ -31,6 +31,8 @@ module.exports = {
           throw 'email_not_confirmed';
         }
 
+        authConfig.checkLogin(user);
+
         accessToken = authService.issueTokenForUser(user);
 
         return res.ok({
