@@ -1,6 +1,6 @@
 {
   "name": "sails-hook-authorization-bcrypt-nodejs",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "description": "A JWT authentication system",
   "main": "index.js",
   "scripts": {
